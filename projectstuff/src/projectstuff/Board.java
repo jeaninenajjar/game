@@ -12,7 +12,7 @@ import java.util.*;
 * @author Jarrett Levin
 */
 public class Board{
-	String[][] array;
+	Object[][] array;
 	Player player;
 	PossibleHazards possiblehazards;
 	
@@ -24,11 +24,20 @@ public class Board{
 	 * PossibleHazards.
 	 */
 	public Board(){
-		String[][] arr = new String[40][20];
+		Object[][] arr = new Object[40][20];
+		int[][] salarr = new int[40][20];
 		Player acrab = new Player();
 		PossibleHazards ph = new PossibleHazards();
 		player = acrab;
 		possiblehazards = ph;
+	}
+	/** This method returns a part of the array given a coordinate
+	 * @param x  the x coordinate of the specified tile
+	 * @param y  The y coordinate of the specified tile
+	 * @return String the specified file.
+	 */
+	public Object getTile(int x, int y){
+		return array[x][y];
 	}
 	/**
 	 * This method determines if there has been
