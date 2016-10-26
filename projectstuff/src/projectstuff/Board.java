@@ -26,7 +26,7 @@ public class Board{
 	public Board(){
 		Object[][] arr = new Object[40][20];
 		int[][] salarr = new int[40][20];
-		Player acrab = new Player();
+		Player acrab = new Player(0, 0, 0, 0, 0, 0, 0, "Trash", "Neutral");
 		PossibleHazards ph = new PossibleHazards();
 		player = acrab;
 		possiblehazards = ph;
