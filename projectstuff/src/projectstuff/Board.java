@@ -12,9 +12,9 @@ import java.util.*;
 * @author Jarrett Levin
 */
 public class Board{
-	Object[][] array;
-	Player player;
-	PossibleHazards possiblehazards;
+	int[][] array;
+	int BOARDHEIGHT = 20;
+	final int BOARDWIDTH = 40;
 	
 	/**
 	 * This is a constructor for the Board class.
@@ -24,49 +24,25 @@ public class Board{
 	 * PossibleHazards.
 	 */
 	public Board(){
-		Object[][] arr = new Object[40][20];
-		int[][] salarr = new int[40][20];
-		Player acrab = new Player(0, 0, 0, 0, 0, 0, 0, "Trash", "Neutral");
-		PossibleHazards ph = new PossibleHazards();
-		player = acrab;
-		possiblehazards = ph;
+		int[][] arr = new int[BOARDWIDTH][BOARDHEIGHT];
+		for(int i=0; i<BOARDHEIGHT; i++){
+			for(int j=0; j<BOARDWIDTH; j++){
+				arr[i][j]=0;
+			}
+		}
+		arr[BOARDWIDTH/2][0]=1;
+		arr[BOARDWIDTH/2+1][0]=1;
+		arr[BOARDWIDTH/2-1][0]=1;
+		arr[BOARDWIDTH/2][20]=-1;
+		arr[BOARDWIDTH/2+1][20]=-1;
+		arr[BOARDWIDTH/2-1][20]=-1;
 	}
 	/** This method returns a part of the array given a coordinate
 	 * @param x  the x coordinate of the specified tile
 	 * @param y  The y coordinate of the specified tile
 	 * @return String the specified file.
 	 */
-	public Object getTile(int x, int y){
+	public int getTile(int x, int y){
 		return array[x][y];
-	}
-	/**
-	 * This method determines if there has been
-	 * a collision detected or not.
-	 * @return True if a collision occurred,
-	 *         False if a collision has not occurred;
-	 */
-	public boolean iscollision(){
-		return true;
-	}
-	/**
-	 * This method determines what to do
-	 * in the case of a collision.
-	 
-	 */
-	public void oncollision(){
-		
-	}
-	/**
-	* The method used for wiping the board clean.
-	* Use this method after every round.
-	* 
-	* @param section  The section of the screen you want to wipe
-	*                 If text is null, wipe nothing.  If text is
-	*                 "right", wipe right half of screen, and so
-	*                 on for left, top, bottom, middle, and all.
-	
-	*/
-	public void boardwipe(String section){
-		
 	}
 }
