@@ -1,19 +1,29 @@
 package projectstuff;
 
 public class Player extends Movers{
-	 int xpos = 0;
-	 int ypos = 0;
-	 int xvel = 0;
-	 int yvel = 0;
-	 int salinity = 0;
-	 int salmin = 0;
-	 int salmax = 0;
-	 String tool = "";
-	 int life = 0; //probably start this on 3
-	 String animal = "";
-	 String state = "";
+	
+		
+
+	int xpos ;
+	 int ypos ;
+	 int xvel ;
+	 int yvel ;
+	 int salinity ;
+	 int salmin ;
+	 int salmax ;
+	 String tool;
+	 int life ; 
+	 String state;
 	 
 	 
+	 Player(int xpos, int ypos, int xvel, int yvel, int salinity, int salmin, int salmax, String tool,  String state) {
+			super(xpos, ypos, xvel, yvel);
+			this.salinity = salinity;
+			this.salmin = salmin;
+			this.salmax = salmax;
+			this.tool = tool;
+			this.state = state;
+	 }
 	 
 	/**@author Jeanine
 	 * Subtracts 1 from Life. if Life is 0 do not subtract.

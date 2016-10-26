@@ -2,13 +2,19 @@ package projectstuff;
 
 public class Hazard extends Movers{
   
-  public Hazard(){
-	  xpos = 5;
-	  ypos = 5;
-	  xvel = 15;
-	  yvel = 15;
-  }
-  /**
+
+  
+  
+  public Hazard(int xpos, int ypos, int xvel, int yvel) {
+	super(xpos, ypos, xvel, yvel);
+}
+
+
+
+
+
+
+/**
  * Moves the hazard object one unit to the left in the game.
  
  */
