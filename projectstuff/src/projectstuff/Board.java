@@ -42,7 +42,7 @@ public class Board{
 	/**
 	 * This method determines what to do
 	 * in the case of a collision.
-	 * @return void
+	 
 	 */
 	public void oncollision(){
 		
@@ -55,7 +55,7 @@ public class Board{
 	*                 If text is null, wipe nothing.  If text is
 	*                 "right", wipe right half of screen, and so
 	*                 on for left, top, bottom, middle, and all.
-	* @return void
+	
 	*/
 	public void boardwipe(String section){
 		

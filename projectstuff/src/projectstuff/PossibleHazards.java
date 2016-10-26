@@ -16,7 +16,7 @@ public class PossibleHazards{
 
 	/**
 	 * @param hazards 
-	 * @return void
+	 * hazards are an array of all possible hazards
 	 * Sets the array containing all of the possible hazards
 	 */
 	
@@ -25,7 +25,7 @@ public class PossibleHazards{
 	}
 
 	/**
-	 * @param hazards
+	 * an array of all possible hazards
 	 * @return void
 	 * gets the possible Hazards from the array list
 	 */ 
@@ -35,7 +35,7 @@ public class PossibleHazards{
 
 	/**
 	 * @param hazard
-	 * @return void
+	 * an array of all possible hazards
 	 * adds a single hazard to the array
 	 * 
 	 */
@@ -45,7 +45,7 @@ public class PossibleHazards{
 
 	/**
 	 * @param index
-	 * @return void
+	 * index is an int that represents the position we want in the array
 	 * Removes a hazard from the array at the given index
 	 */
 	public void removeHazard(int index){
@@ -54,7 +54,6 @@ public class PossibleHazards{
 
 	/**
 	 * select a random hazard in array
-	 * @return void
 	 */
 	public void selectRandom(){
 		

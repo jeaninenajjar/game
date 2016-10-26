@@ -10,6 +10,7 @@ public class Movers {
     * moveX updates the x position with the given velocity
    @author Jeanine
  * @param vel
+ * an int that represents the velocity that you want the x position to move at
  * @return xpos
  */
 public static int moveX(int vel){
@@ -22,6 +23,7 @@ public static int moveX(int vel){
     * moveY updates the Y position with the given velocity
     * @author Jeanine
  * @param vel
+ * an int that represents the velocity that you want the Y position to move at
  * @return ypos
  */
 public static int moveY(int vel){

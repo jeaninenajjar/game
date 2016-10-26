@@ -9,7 +9,7 @@ public class Hazard {
   
   /**
  * Moves the hazard object one unit to the left in the game.
- * @return void
+ 
  */
 public void moveLeft(){
   	xCoordinate = xCoordinate - 1;
