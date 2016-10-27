@@ -1,52 +1,71 @@
 package projectstuff;
 
 public class Movers {
+	 int xpos;
+	 int ypos;
+	 int xvel;
+     int yvel;
 
-	static int xpos = 0;
-	static int ypos = 0;
-	
-	
+	Movers(int xpos, int ypos, int xvel, int yvel){
+		this.xpos = xpos;
+		this.ypos= ypos;
+		this.xvel= xvel;
+		this.yvel = yvel;
+	}
+
+	 public int getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(int xpos) {
+		this.xpos = xpos;
+	}
+
+	public int getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(int ypos) {
+		this.ypos = ypos;
+	}
+
+	public int getXvel() {
+		return xvel;
+	}
+
+	public void setXvel(int xvel) {
+		this.xvel = xvel;
+	}
+
+	public int getYvel() {
+		return yvel;
+	}
+
+	public void setYvel(int yvel) {
+		this.yvel = yvel;
+	}
+
+
    /**
     * moveX updates the x position with the given velocity
    @author Jeanine
  * @param vel
+ * an int that represents the velocity that you want the x position to move at
  * @return xpos
  */
-public static int moveX(int vel){
+public void moveX(int vel){
     xpos+= vel;
-	 return xpos;
    }
 	
-   
    /**
     * moveY updates the Y position with the given velocity
     * @author Jeanine
  * @param vel
+ * an int that represents the velocity that you want the Y position to move at
  * @return ypos
  */
-public static int moveY(int vel){
+public void moveY(int vel){
 	 ypos+= vel;
-	 return ypos;
    }
-	
-	
-	public static void main(String[] args){
-		
-	System.out.println(moveX(3));
-	System.out.println(moveX(4));
-	System.out.println(moveY(3));
-	System.out.println(moveY(4));
-	
-	
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
