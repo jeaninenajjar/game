@@ -25,6 +25,90 @@ public class Player extends Movers{
 			this.state = state;
 	 }
 	 
+
+	 public int getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(int xpos) {
+		this.xpos = xpos;
+	}
+
+	public int getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(int ypos) {
+		this.ypos = ypos;
+	}
+
+	public int getXvel() {
+		return xvel;
+	}
+
+	public void setXvel(int xvel) {
+		this.xvel = xvel;
+	}
+
+	public int getYvel() {
+		return yvel;
+	}
+
+	public void setYvel(int yvel) {
+		this.yvel = yvel;
+	}
+
+	public int getSalinity() {
+		return salinity;
+	}
+
+	public void setSalinity(int salinity) {
+		this.salinity = salinity;
+	}
+
+	public int getSalmin() {
+		return salmin;
+	}
+
+	public void setSalmin(int salmin) {
+		this.salmin = salmin;
+	}
+
+	public int getSalmax() {
+		return salmax;
+	}
+
+	public void setSalmax(int salmax) {
+		this.salmax = salmax;
+	}
+
+	public String getTool() {
+		return tool;
+	}
+
+	public void setTool(String tool) {
+		this.tool = tool;
+	}
+
+	public int getLife() {
+		return life;
+	}
+
+	public void setLife(int life) {
+		this.life = life;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	
+	
+	
 	/**@author Jeanine
 	 * Subtracts 1 from Life. if Life is 0 do not subtract.
 	 */
@@ -55,7 +139,7 @@ public class Player extends Movers{
 		 
 	 }
 	 
-	 /**@author Jeanine
+	/**@author Jeanine
 		 * Changes the salinity from increasing to decreasing
 		 */ 
 	 public void FlipSalinity(){
