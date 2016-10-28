@@ -1,31 +1,23 @@
 package projectstuff;
 
 public class Player extends Movers{
-	
-		
-
-	int xpos ;
-	 int ypos ;
-	 int xvel ;
-	 int yvel ;
 	 int salinity ;
 	 int salmin ;
 	 int salmax ;
-	 String tool;
+	 int tool;
 	 int life ; 
 	 String state;
 	 
-	 
-	 Player(int xpos, int ypos, int xvel, int yvel, int salinity, int salmin, int salmax, String tool,  String state) {
+	 Player(int xpos, int ypos, int xvel, int yvel, int salinity, int salmin, int salmax, int tool,  String state) {
 			super(xpos, ypos, xvel, yvel);
 			this.salinity = salinity;
 			this.salmin = salmin;
 			this.salmax = salmax;
 			this.tool = tool;
 			this.state = state;
+			this.life=3;
 	 }
-	 
-
+	
 	 public int getXpos() {
 		return xpos;
 	}
@@ -36,6 +28,16 @@ public class Player extends Movers{
 
 	public int getYpos() {
 		return ypos;
+	}
+
+	public boolean isSalOver(){
+		return salinity>salmax;
+	}
+	public boolean isSalUnder(){
+		return salinity<salmin;
+	}
+	public void loseLife(){
+		life-=1;
 	}
 
 	public void setYpos(int ypos) {
@@ -82,11 +84,11 @@ public class Player extends Movers{
 		this.salmax = salmax;
 	}
 
-	public String getTool() {
+	public int getTool() {
 		return tool;
 	}
 
-	public void setTool(String tool) {
+	public void setTool(int tool) {
 		this.tool = tool;
 	}
 
@@ -150,18 +152,14 @@ public class Player extends Movers{
 	 /**@author Jeanine
 		 * changes the tool depending on what it is, will cycle through it.
 		 */
-	 public void SwitchTool(){
-		 if (tool.equals("recycle")){
-			 tool = "compost";}
-		 else if (tool.equals("compost")){
-		     tool = "trash";}
-		 else {
-		     tool = "recycle";}
-		 
-		
-			 
-			 
-		 }
+//	 public void SwitchTool(){
+//		 if (tool.equals("recycle")){
+//			 tool = "compost";}
+//		 else if (tool.equals("compost")){
+//		     tool = "trash";}
+//		 else {
+//		     tool = "recycle";}
+//		 }
 		 
 	 }
 

@@ -10,10 +10,6 @@ public class Hazard extends Movers{
 }
 
 
-
-
-
-
 /**
  * Moves the hazard object one unit to the left in the game.
  
